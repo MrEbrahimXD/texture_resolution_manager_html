@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: #E4E4E7;
+    background: #09090B;
+    padding: 40px 20px;
+  }
+  
+  .hero {
+    background: linear-gradient(165deg, #18181B 0%, #27272A 100%);
+    border: 1px solid #3F3F46;
+    padding: 60px 40px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .hero h1 {
+    font-size: 3.5em;
+    margin: 0;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+  }
+
+  .crazy_title {
+    font-size: 2.5em;
+    margin: 0;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+  }
+
+  .crazy_text {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+  }
+
+  .price-badge {
+    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 20px 0;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+  }
+  
+  .feature-card {
+    background: #18181B;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #27272A;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+  }
+  
+  .feature-card h3 {
+    color: #A78BFA;
+    margin-top: 0;
+    font-size: 1.4em;
+  }
+  
+  .value-prop {
+    background: linear-gradient(165deg, #1E1B4B 0%, #312E81 100%);
+    padding: 40px;
+    border-radius: 16px;
+    margin: 40px 0;
+    border: 1px solid #4C1D95;
+  }
+  
+  .cta-button {
+    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .features-list li {
+    margin: 12px 0;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .features-list li::before {
+    content: '▹';
+    color: #8B5CF6;
+    position: absolute;
+    left: 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .stat-card {
+    background: #18181B;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #27272A;
+  }
+
+  .stat-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #8B5CF6;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>Texture Resolution Manager</h1>
+    <p>Advanced texture optimization solution for large, complex objects and scenes. Used by professionals.</p>
+    <div class="price-badge">$10 - Lifetime Access + Free Updates</div>
+  </div>
+
+  <h2 class="crazy_title">Why Texture Resolution Manager?</h2>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>⚡ Instant Optimization</h3>
+      <p>Transform massive 8K+ textures into optimized assets with a single click. Perfect for game development and real-time 3D.</p>
+    </div>
+    
+    <div class="feature-card">
+      <h3>🎯 Smart Control</h3>
+      <p>Choose from presets (512px to 8K) or custom values. Maintain perfect aspect ratios automatically.</p>
+    </div>
+    
+    <div class="feature-card">
+      <h3>🔄 Batch Processing</h3>
+      <p>Optimize hundreds of textures simultaneously. Full BlenderKit compatibility included.</p>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">75%</div>
+      <p>Average size reduction</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">100x</div>
+      <p>Faster than manual</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">20GB+</div>
+      <p>Typical storage saved in larger projects.</p>
+    </div>
+  </div>
+
+  <div class="value-prop">
+    <h3>Why It's Essential</h3>
+    <p>A single 8K texture can consume 268MB of memory. In a large project with 100 textures, you're looking at 26GB+ of texture data. This add-on transforms hours of manual optimization into a 2-minute process.</p>
+  </div>
+
+  <h2 class="crazy_title">Unique Features:</h2>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">🛠️ Texture Isolation</div>
+      <p>Optimizing complex objects in blender with lots of textures. A Large vegetation scene performance would increase by <span class="crazy_text">85%</span> in Larger projects.</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-number">🎚️ Scale Factor</div>
+      <p>Quickly adjust your textures performance without touching resolutions. Slider (0.25x to 4x) to instantly max out the performance.</p>
+    </div>
+  </div>
+
+  <h2>Core Features</h2>
+  <ul class="features-list">
+    <li>Intelligent texture type detection (Base Color, Normal, Roughness)</li>
+    <li>Custom resolution control (512px to 8K)</li>
+    <li>Real-time statistics and memory tracking</li>
+    <li>Original resolution restoration</li>
+    <li>BlenderKit asset compatibility</li>
+    <li>Scale factor mode for relative resizing</li>
+  </ul>
+
+  <div class="value-prop">
+    <h3>Perfect For</h3>
+    <p>Game developers, 3D artists, and studios dealing with high-resolution textures. Essential for mobile game optimization, VR development, and large-scale 3D projects.</p>
+  </div>
+
+  <a href="#" class="cta-button">Legion it Now!</a>
+
+  <p><strong>Compatible with Blender 2.8+ • 30-day money-back guarantee</strong></p>
+</div>
+</body>
+</html>
